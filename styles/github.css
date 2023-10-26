@@ -28,6 +28,8 @@
     opacity: 0;
     animation-delay: 0.5s;
     animation-name: pfp-img;
+    width: 100%;
+    height: auto;
     animation-duration: 2s;
     animation-fill-mode: inherit;
     animation-delay: 1s;
