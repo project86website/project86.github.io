@@ -1,0 +1,119 @@
+body {
+margin: 0;
+background-color: rgb(82, 78, 78);
+font-family: 'Courier New', Courier, monospace;
+color: white;
+}
+html, body {
+width: 100%;
+height: 100%;
+overflow-x: hidden;
+}
+
+
+
+/*Bottom nav bar*/
+.topnav {
+display: flex;
+height: 5vh;
+flex: content;
+overflow: visible;
+align-self: center;
+text-align: center;
+align-items: center;
+background-color: rgb(30,33,38);
+bottom: 0;
+margin-bottom: 2vh;
+margin-left: 1vw;
+margin-right: 1vw;
+color: white;
+border-radius: 30px;
+box-shadow: 0px 0px 20px 5px rgb(41, 70, 70), inset 0px 0px 20px 5px rgb(41, 70, 70);
+position: fixed;
+-moz-transition: 0.5s ease;
+transition: 0.5s ease;
+-moz-animation-name: topnavAnim;
+animation-name: topnavAnim;
+-moz-animation-duration: 2.7s;
+animation-duration: 2.7s; 
+vertical-align: middle;
+> #constant {
+    background-color: rgb(32, 53, 53);
+    box-shadow: 0px 0px 20px 5px rgb(41, 70, 70);
+    margin-right: 25px;
+    border-radius: 30px;
+    opacity: 0;
+    bottom: 0;
+    position: relative;
+    transition: 0.5s ease;
+    animation-name: topnavAnim;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    color: white;
+    float: left;
+    padding: 1.8vh 2vw;
+    text-decoration: wavy;
+    font-size: 20px;
+}
+
+> #empty {
+    bottom: 0;
+    padding: 5px;
+}
+
+> .active { 
+    bottom: 0;
+    box-shadow: 0px 0px 20px 10px rgb(39, 67, 68); 
+    padding: 1.8vh 2vh;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative; 
+    transition: 0.5s ease;
+    animation-name: topnavAnim; 
+    text-decoration: underline;
+    bottom: 0;
+    pointer-events: none;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s; 
+    animation-delay: 0.2s;
+    background-color: rgb(26, 34, 34); 
+    color: white;
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+> .inactive {
+    float: left;
+    background-color: rgb(56, 56, 56);
+    box-shadow: 0 0 10px 1px rgb(41, 70, 70);
+    position: relative;
+    color: white;
+    padding: 1.8vh 2vh;
+    bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius:30px;
+    animation-name: topnavAnim; 
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    transition: transform 0.5s, box-shadow 0.5s;
+    text-align: center;
+    text-decoration: wavy;
+    font-size: 20px;
+}
+> :hover {
+    transform: scale(1.2);
+    bottom: 0;
+    box-shadow: 0px 0px 20px 10px rgb(41, 70, 70);
+    border-radius: 30px;
+    z-index: 101;
+}
+}
+
+@keyframes topnavAnim {
+    0% {opacity: 0; filter: blur(100px); margin-top: 500px;}
+    40% {filter: blur(0px);}
+    50% {opacity: 0.75; margin-top: 300px;}
+    100% {opacity: 1; filter: blur(0px); margin-top: 0;}
+}
